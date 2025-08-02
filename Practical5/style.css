@@ -1,0 +1,155 @@
+/* I used these css styles to reset the base styles and make the page a little better */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  scroll-behavior: smooth;
+}
+body {
+  font-family: "Segoe UI", sans-serif;
+  background: linear-gradient(135deg, #f9f9f9, #f0f0f0);
+  color: #333;
+  line-height: 1.6;
+  min-height: 100vh;
+}
+
+/* Added a container */
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+/* Set up a navigation and added styes to make the page look much better */
+nav {
+  background-color: #fff;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.05);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 0;
+}
+/* Made the logo circular in nature to make the page look better */
+.logo {
+  font-weight: bold;
+  font-size: 1.3rem;
+  color: #f57f17;
+}
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+.nav-links li a {
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+  padding: 6px 10px;
+  border-radius: 6px;
+  /* Added a transition to the background for the anchor tag in the navigation bar */
+  transition: background 0.3s;
+}
+/* Added a background to the hover for the anchor tag in the navigation bar */
+.nav-links li a:hover {
+  background: #fbc02d;
+  color: #fff;
+}
+
+/* Making the hero section in our code */
+.hero-section {
+  text-align: center;
+  padding: 4rem 1rem;
+  background: linear-gradient(to right, #fffbd5, #f9d423);
+}
+.hero-img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  margin-bottom: 1rem;
+}
+.hero-section h1 {
+  font-size: 2.5rem;
+  color: #f57f17;
+}
+.tagline {
+  font-style: italic;
+  color: #555;
+  margin-top: 0.5rem;
+}
+
+/* Styling the section in our code */
+section {
+  margin-top: 60px;
+}
+
+/* Creating a glass effect using semi transperent elements and blurred elements this is called the Glassmorphism effect */
+.glass-card {
+  background: rgba(255, 255, 255, 0.8);
+  border-radius: 15px;
+  padding: 2rem;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(10px);
+  transition: transform 0.3s ease;
+}
+/*Creating a effect to move the element on the Y axis by 5 px*/
+.glass-card:hover {
+  transform: translateY(-5px);
+}
+
+/* Creating a projects grid */
+.projects-grid {
+  display: grid;
+  gap: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+}
+
+/* Adding some styles to the form to make it look better */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-top: 1rem;
+}
+form input,
+form textarea {
+  padding: 12px;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+}
+form input:focus,
+form textarea:focus {
+  border-color: #fbc02d;
+  outline: none;
+}
+form button {
+  background-color: #f57f17;
+  color: white;
+  border: none;
+  padding: 12px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background 0.3s ease;
+}
+form button:hover {
+  background-color: #ef6c00;
+}
+
+/* making the media responsive after a max width of 786px */
+@media (max-width: 768px) {
+  .nav-links {
+    flex-direction: column;
+    gap: 10px;
+    text-align: center;
+  }
+}
